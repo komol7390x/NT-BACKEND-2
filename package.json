@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch script.js",
+    "nodemon": "nodemon script.js",
+    "start": "node script.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,9 @@
     "url": "https://github.com/komol7390x/NT-BACKEND-2/issues"
   },
   "homepage": "https://github.com/komol7390x/NT-BACKEND-2#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "nodemon": "^3.1.10"
+  }
 }
