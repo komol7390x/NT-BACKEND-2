@@ -1,3 +1,2 @@
-// console.log('Salom');
-// console.log('1111');
-
+const file=require('./minus')
+file.minus(2,3)
