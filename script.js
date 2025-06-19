@@ -28,3 +28,43 @@ const person=new Person('Komol')
 // circle(5)
 // kvadrat(4);
 // burchak(3,4)
+// ----------------------------------------------------------------------------------------------------------------------
+// QOSHIMCHA
+
+// let n = 10;
+
+// async function func() {
+//     return await new Promise(res => {
+//         setTimeout(() => {
+//             n = 30;
+//             res(n);
+//         }, 2000);
+//     });
+// }
+// async function res(){
+// const a = await func();
+// console.log(a); 
+// }
+// res()
+
+// let n = 10;
+
+// function salom(callback) {
+//     setTimeout(() => {
+//         n = 30;
+//         callback(n);
+//     }, 2000);
+// }
+
+// salom((res) => {
+//     console.log(`Bu qiyamt ${res} qo'shildi`); // 30
+// });
+
+async function func(isBoolen){
+    if(isBoolen){
+        return true
+    }else{
+        throw new Error('Xatolik bajarildi');
+    }
+}
+func(false).then(res=>console.log('Resolve bajarildi')).catch(err=>console.log(err.message))
