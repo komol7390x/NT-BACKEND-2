@@ -8,6 +8,6 @@ fs.readFile('text.txt','utf-8',(err,data)=>{
     // console.log('BU data: ',data);
 })
 const data=fs.promises.readFile('text.txt','utf-8')
-console.log(data);
+// console.log(data);
 
-data.then(res=>console.log(res)).catch(console.log)
+data.then(res=>console.log(res)).catch(console.log);
