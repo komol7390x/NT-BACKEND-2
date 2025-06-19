@@ -2,6 +2,7 @@ const { add,minus,mult,division } = require("./child");
 const {sayHi}=require('./greet')
 const{Person}=require('./stringUtils')
 const {toFrangiy,toSelsiy}=require('./tempConverter')
+const {circle}=require('./area')
 // ----------------------------------------------------------
 // TASK-1
 // add(3,4);
@@ -24,3 +25,4 @@ const person=new Person('Komol')
 // toFrangiy(80)
 // ----------------------------------------------------------
 // TASK-5
+circle(5)
