@@ -1,5 +1,6 @@
 const { add,minus,mult,division } = require("./child");
 const {sayHi}=require('./greet')
+const{Person}=require('./stringUtils')
 // ----------------------------------------------------------
 // TASK-1
 // add(3,4);
@@ -10,3 +11,11 @@ const {sayHi}=require('./greet')
 // ----------------------------------------------------------
 // TASK-2
 // sayHi('Komol')
+// ----------------------------------------------------------
+// TASK-3
+const person=new Person('Komol')
+// person.uppper()
+// person.length()
+// person.sign()
+// ----------------------------------------------------------
+// TASK-4
