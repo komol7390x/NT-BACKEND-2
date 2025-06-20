@@ -1,4 +1,4 @@
-const { log } = require('node:console');
+const { log, error } = require('node:console');
 const os=require('node:os');
 // ----------------------------------------------------------------------------
 // OS MODULI
@@ -45,4 +45,64 @@ const path=require('node:path');
 
 // ----------------------------------------------------------------------------
 // FILE SYSTEM (fs) MODULE
-
+const fs=require('node:fs');
+// ---------------------------------
+// fs.mkdir('dang',(error=>{
+//     if(error){
+//         throw console.log(error);
+//     }console.log('success');
+// }))
+// ---------------------------------
+// try {
+//     fs.mkdirSync('Salom')
+//     console.log('Success');
+// } catch (error) {
+//     console.log(error);
+// }
+// ---------------------------------
+// async function folder(){  //('node:fs/promises');
+//     try {
+//         fs.mkdir('Salom2')
+//         console.log('Dangg');
+//     } catch (error) {
+        
+//     }
+// }
+// folder()
+// ---------------------------------
+// fs.mkdir('madrid/real',{recursive:true},(error=>{
+//     if(error){
+//         throw ('Hato')
+//     }
+// }))
+// ---------------------------------
+// async function createFolder(){  //('node:fs/promises');
+//     try {
+//         fs.mkdir("Salom/qalesan",{recursive:true})
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// createFolder()
+// ---------------------------------
+// fs.rm('Salom',{recursive:true,force:true},(error)=>{  //papkani delete qilish
+//     if(error){
+//         console.log('xato',error);
+//     }
+// })
+// ---------------------------------
+// async function removeDir(){
+//     try {
+//         fs.rm('Salom2',{recursive:true,force:true})
+//     } catch (error) {
+//         console.log('Xato',error);
+//     }
+// }
+// removeDir()
+// ---------------------------------
+// fs.writeFile('text.txt','salom',(error=>{
+//     if(error){
+//         console.log(error);
+//     }
+// }))
+// ---------------------------------
