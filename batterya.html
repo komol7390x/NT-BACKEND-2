@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Batareya Holati</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; background: #f0f0f0; }
+    .card {
+      background: white;
+      padding: 1em;
+      border-radius: 10px;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Batareya Holati</h2>
+    <p><strong>Foiz:</strong> <span id="level">--</span>%</p>
+    <p><strong>Holati:</strong> <span id="status">--</span></p>
+    <p><strong>Zaryad:</strong> <span id="charging">--</span></p>
+  </div>
+
+  <script>
+    navigator.getBattery().then(function(battery) {
+      function updateBatteryStatus() {
+        document.getElementById("level").textContent = Math.round(battery.level * 100);
+        document.getElementById("charging").textContent = battery.charging ? "Ha" : "Yo‘q";
+        document.getElementById("status").textContent = battery.charging 
+          ? (battery.level >= 1 ? "To‘liq zaryadlangan" : "Zaryadlanmoqda") 
+          : "Zaryadlanmayapti";
+      }
+
+      updateBatteryStatus();
+
+      battery.addEventListener('levelchange', updateBatteryStatus);
+      battery.addEventListener('chargingchange', updateBatteryStatus);
+    });
+  </script>
+</body>
+</html>
