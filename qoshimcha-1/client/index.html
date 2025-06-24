@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Ma'lumotlar Formasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Resume ma'lumotlarini to'ldiring</h1>
+    <form action="http://localhost:3001/resume" method="POST" target="_blank">
+    
+      <fieldset>
+        <legend>👤 Shaxsiy Ma'lumotlar</legend>
+        <label for="fullname">Ism Familiya:</label>
+        <input type="text" id="fullname" name="fullname" required>
+    
+        <label for="position">Kasbingiz:</label>
+        <input type="text" id="position" name="position" required>
+      </fieldset>
+    
+      <fieldset>
+        <legend>📞 Aloqa</legend>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="telegram">Telegram:</label>
+        <input type="url" id="telegram" name="telegram">
+        <label for="linkedin">LinkedIn:</label>
+        <input type="url" id="linkedin" name="linkedin">
+        <label for="github">GitHub:</label>
+        <input type="url" id="github" name="github">
+      </fieldset>
+      
+      <fieldset>
+        <legend>🛠 Texnologiyalar</legend>
+        <label for="skills">Texnologiyalar ro'yxati:</label>
+        <textarea id="skills" name="skills" rows="4" placeholder="Masalan: JavaScript, React, Node.js..."
+          required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>🌐 Tillar</legend>
+        <label for="languages">Til va darajasi:</label>
+        <input type="text" id="languages" name="languages" placeholder="Masalan: Uzbek - Native, English - B1">
+      </fieldset>
+      <button type="submit">Yuborish</button>
+    </form>
+    </div>
+    </body>
+    
+    </html>
