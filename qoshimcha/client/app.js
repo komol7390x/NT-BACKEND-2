@@ -9,5 +9,5 @@ socket.onmessage=(event)=>{
     console.log(event.data);
 }
 socket.onerror=(error)=>{
-    console.log(error)
+    console.log(error);
 }
