@@ -1,58 +1,66 @@
 [
   {
     "id": 1,
-    "username": "Jamol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:22:34.970Z",
-    "updateAt": "2025-07-01T07:25:40.686Z"
+    "username": "Aziza",
+    "fullName": "Azizova",
+    "age": "25",
+    "createdAt": "2025-07-01T07:29:18.512Z",
+    "updateAt": "2025-07-01T07:32:10.644Z"
   },
   {
     "id": 2,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:24.827Z",
-    "updateAt": "2025-07-01T07:25:24.827Z"
+    "username": "Lola",
+    "fullName": "Loliyeva",
+    "age": "23",
+    "createdAt": "2025-07-01T07:29:49.816Z",
+    "updateAt": "2025-07-01T07:29:49.816Z"
   },
   {
     "id": 3,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:25.522Z",
-    "updateAt": "2025-07-01T07:25:25.522Z"
+    "username": "Zebo",
+    "fullName": "Zeboyeva",
+    "age": "14",
+    "createdAt": "2025-07-01T07:29:58.776Z",
+    "updateAt": "2025-07-01T07:31:48.633Z"
   },
   {
     "id": 4,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:25.932Z",
-    "updateAt": "2025-07-01T07:25:25.932Z"
+    "username": "Mira",
+    "fullName": "Mirzaeva",
+    "age": "28",
+    "createdAt": "2025-07-01T07:30:13.188Z",
+    "updateAt": "2025-07-01T07:30:13.188Z"
   },
   {
     "id": 5,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:26.881Z",
-    "updateAt": "2025-07-01T07:25:26.881Z"
+    "username": "Rustam",
+    "fullName": "Rustamov",
+    "age": "17",
+    "createdAt": "2025-07-01T07:30:19.658Z",
+    "updateAt": "2025-07-01T07:30:19.658Z"
   },
   {
     "id": 6,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:27.307Z",
-    "updateAt": "2025-07-01T07:25:27.307Z"
+    "username": "Dilnoza",
+    "fullName": "Dilnozayeva",
+    "age": "21",
+    "createdAt": "2025-07-01T07:30:27.834Z",
+    "updateAt": "2025-07-01T07:30:27.834Z"
   },
   {
     "id": 7,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:27.676Z",
-    "updateAt": "2025-07-01T07:25:27.676Z"
+    "username": "Bek",
+    "fullName": "Bekmurodov",
+    "age": "26",
+    "createdAt": "2025-07-01T07:30:35.321Z",
+    "updateAt": "2025-07-01T07:30:35.321Z"
   },
   {
     "id": 8,
-    "username": "Komol",
-    "fullName": "Komolov",
-    "createdAt": "2025-07-01T07:25:28.684Z",
-    "updateAt": "2025-07-01T07:25:28.684Z"
+    "username": "Zebo",
+    "fullName": "Zeboyeva",
+    "age": "14",
+    "createdAt": "2025-07-01T07:30:41.770Z",
+    "updateAt": "2025-07-01T07:30:41.770Z"
   }
 ]
