@@ -24,9 +24,15 @@ const addUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
     try {
         const users = await read();
+        const {minAge,maxAge}=req.query
+        const newUser=users.filter(item=>{
+            if(item.age>=(+minAge)&& item.age<=(+maxAge)){
+                return item
+            }
+        })
         return res.status(201).json({
             message: 'all user',
-            data: users
+            data: newUser
         })
     } catch (error) {
         return res.status(500), json({
