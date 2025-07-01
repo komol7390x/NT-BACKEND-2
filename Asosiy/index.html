@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="Enter please username">
+    <div id="chat" style="border: 1px black solid; height: 200px; overflow-y: scroll;
+        margin: 10px 0;"></div>
+    <input type="text" id="message" placeholder="Enter please text">
+    <button onclick="sendMessage()">Send message</button>
+    <script>
+        const ws = new WebSocket('ws://localhost:3003');
+        ws.addEventListener('message', (event) => {
+            const chat = document.getElementById('chat');
+            chat.innerHTML += `<p>${event.data}</p>`;
+            chat.scrollTop = chat.scrollHeight;
+        });
+        function sendMessage() {
+            const name = document.getElementById('username').value;
+            const message = document.getElementById('message').value;
+            if (name && message) {
+                ws.send(`${name}: ${message}`);
+                document.getElementById('message').value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

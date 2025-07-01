@@ -1,0 +1,13 @@
+{
+  "name": "asosiy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main-10-1.js",
+  "type": "module",
+  "scripts": {
+    "dev":"node --watch main-10-1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
