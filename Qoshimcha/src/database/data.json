@@ -1,122 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Ali",
-    "age": "20",
-    "group": "Group A"
+    "username": "Jamol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:22:34.970Z",
+    "updateAt": "2025-07-01T07:25:40.686Z"
   },
   {
     "id": 2,
-    "name": "Vali",
-    "age": "21",
-    "group": "Group B"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:24.827Z",
+    "updateAt": "2025-07-01T07:25:24.827Z"
   },
   {
     "id": 3,
-    "name": "Sardor",
-    "age": "19",
-    "group": "Group A"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:25.522Z",
+    "updateAt": "2025-07-01T07:25:25.522Z"
   },
   {
     "id": 4,
-    "name": "Gulnoza",
-    "age": "22",
-    "group": "Group C"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:25.932Z",
+    "updateAt": "2025-07-01T07:25:25.932Z"
   },
   {
     "id": 5,
-    "name": "Dilshod",
-    "age": "23",
-    "group": "Group B"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:26.881Z",
+    "updateAt": "2025-07-01T07:25:26.881Z"
   },
   {
     "id": 6,
-    "name": "Zarina",
-    "age": "20",
-    "group": "Group A"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:27.307Z",
+    "updateAt": "2025-07-01T07:25:27.307Z"
   },
   {
     "id": 7,
-    "name": "Botir",
-    "age": "21",
-    "group": "Group C"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:27.676Z",
+    "updateAt": "2025-07-01T07:25:27.676Z"
   },
   {
     "id": 8,
-    "name": "Jamola",
-    "age": "19",
-    "group": "Group B"
-  },
-  {
-    "id": 9,
-    "name": "Jasur",
-    "age": "24",
-    "group": "Group A"
-  },
-  {
-    "id": 10,
-    "name": "Madina",
-    "age": "18",
-    "group": "Group C"
-  },
-  {
-    "id": 11,
-    "name": "Rustam",
-    "age": "22",
-    "group": "Group B"
-  },
-  {
-    "id": 12,
-    "name": "Malika",
-    "age": "20",
-    "group": "Group A"
-  },
-  {
-    "id": 13,
-    "name": "Otabek",
-    "age": "23",
-    "group": "Group C"
-  },
-  {
-    "id": 14,
-    "name": "Nigora",
-    "age": "21",
-    "group": "Group B"
-  },
-  {
-    "id": 15,
-    "name": "Sanjar",
-    "age": "19",
-    "group": "Group A"
-  },
-  {
-    "id": 16,
-    "name": "Lola",
-    "age": "22",
-    "group": "Group C"
-  },
-  {
-    "id": 17,
-    "name": "Elyor",
-    "age": "20",
-    "group": "Group B"
-  },
-  {
-    "id": 18,
-    "name": "Sabina",
-    "age": "21",
-    "group": "Group A"
-  },
-  {
-    "id": 19,
-    "name": "Javohir",
-    "age": "23",
-    "group": "Group C"
-  },
-  {
-    "id": 20,
-    "name": "Dilnoza",
-    "age": "18",
-    "group": "Group B"
+    "username": "Komol",
+    "fullName": "Komolov",
+    "createdAt": "2025-07-01T07:25:28.684Z",
+    "updateAt": "2025-07-01T07:25:28.684Z"
   }
 ]

@@ -46,7 +46,9 @@ const updateUser = async (req, res) => {
                 data: {}
             })
         }
-        users[index] = { id, ...req.body }
+        const newData=new Date()
+        const data=users[index].createdAt
+        users[index] = { id, ...req.body,createdAt:data,updateAt:newData }
         write(users)
         return res.status(201).json({
             message: 'update user',
