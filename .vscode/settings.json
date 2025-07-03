@@ -11,7 +11,7 @@
             "driver": "MySQL",
             "name": "Komol",
             "username": "root",
-            "password": "zxcv",
+            "password": "12345",
             "database": "Online_Curs"
         }
     ]
