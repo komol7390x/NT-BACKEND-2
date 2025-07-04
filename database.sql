@@ -27,29 +27,3 @@ FOREIGN KEY (course_id) REFERENCES courses(id)
 
 -- @block
 SELECT * FROM enrollments
-
-
-
-DELIMITER $$
-CREATE PROCEDURE insert_random_enrollments()
-BEGIN
-    DECLARE i INT DEFAULT 1;
-    DECLARE rand_course INT;
-    DECLARE rand_days INT;
-    DECLARE enrollment_date DATE;
-
-    WHILE i <= 1000000 DO
-        SET rand_course = FLOOR(1 + (RAND() * 100));
-        SET rand_days = FLOOR(RAND() * 2922);
-        SET enrollment_date = DATE_ADD('2018-01-01', INTERVAL rand_days DAY);
-
-        INSERT INTO enrollments (course_id, student_name, enrolled_at)
-        VALUES (
-            rand_course,
-            CONCAT('Student_', i),
-            enrollment_date
-        );
-        SET i = i + 1;
-    END WHILE;
-END$$
-DELIMITER ;
