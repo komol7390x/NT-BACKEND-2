@@ -11,6 +11,6 @@ const server=express();
 const PORT=+process.env.PORT
 
 server.use(express.json());
-server.use('/countries',userRouters)
+server.use('/country',userRouters)
 
 server.listen(PORT,()=>console.log(`Server is running:`,PORT))
