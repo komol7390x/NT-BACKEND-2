@@ -1,12 +1,11 @@
 import {Router} from 'express'
-// import {createUsers,getAllUser,getUserById,updateUser,deleteUser} from '../controller/country.controller.js'
+import {CountryController} from '../controller/country.controller.js'
 
-// const routers=Router();
-// routers
-//     .post('/',createUsers)
-//     .get('/',getAllUser)
-//     .get('/:id',getUserById)
-//     .put('/:id',updateUser)
-//     .delete('/:id',deleteUser)
+const router=Router()
+const controller=new CountryController()
 
-// export default routers    
+router
+    .post('/',controller.createCountry)
+    .get('/',controller.salom)
+
+export default router    
