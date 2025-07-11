@@ -9,4 +9,5 @@ const countrySchema=new Schema({
     },{timestamps:true})
 
 const Country=model('Country',countrySchema);
+
 export default Country

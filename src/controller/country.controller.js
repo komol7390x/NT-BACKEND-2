@@ -1,7 +1,7 @@
 import Country from '../models/country.model.js';
-import {Types,isValidObjectId} from 'mongoose';
+import {isValidObjectId} from 'mongoose';
 
-class CountryController{
+export class CountryController{
     
     async createCountry(req,res){
         try { 
@@ -19,7 +19,7 @@ class CountryController{
                 data:result
             })
         } catch (error) {
-            return res.statuts(500).json({
+            return res.status(500).json({
                 statusCode:500,
                 message:error.message || 'Internal error server'
             })
@@ -36,7 +36,7 @@ class CountryController{
             })
 
         } catch (error) {
-            return res.statuts(500).json({
+            return res.status(500).json({
                 statusCode:500,
                 message:error.message || 'Internal error server'
             })
@@ -66,7 +66,7 @@ class CountryController{
             })
 
         } catch (error) {
-            return res.statuts(500).json({
+            return res.status(500).json({
                 statusCode:500,
                 message:error.message || 'Internal error server'
             })
@@ -96,7 +96,7 @@ class CountryController{
             })
 
         } catch (error) {
-            return res.statuts(500).json({
+            return res.status(500).json({
                 statusCode:500,
                 message:error.message || 'Internal error server'
             })
@@ -115,19 +115,15 @@ class CountryController{
             return res.status(200).json({
                 statusCode:200,
                 message: 'success',
-                data:countries
+                data:{}
             })
 
         } catch (error) {
-            return res.statuts(500).json({
+            return res.status(500).json({
                 statusCode:500,
                 message:error.message || 'Internal error server'
             })
         }
     }
 
-}
-
-export{
-    CountryController
 }

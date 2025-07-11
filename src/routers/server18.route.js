@@ -11,4 +11,4 @@ router
     .patch('/:id',controller.UpdateCountry)
     .delete('/:id',controller.deleteCountry)
 
-export default router    
+export {router}
