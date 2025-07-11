@@ -1,5 +1,5 @@
 import Country from '../models/country.model.js';
-
+import {Types,isValidObjectId} from 'mongoose';
 export class CountryController{
     async createCountry(req,res){
         try { 
@@ -27,6 +27,96 @@ export class CountryController{
     async getAllCountry(_,res){
         try {
             const countries=await Country.find();
+            return res.status(200).json({
+                statusCode:201,
+                message: 'success',
+                data:countries
+            })
+
+        } catch (error) {
+            return res.statuts(500).json({
+                statusCode:500,
+                message:error.message || 'Internal error server'
+            })
+        }
+    }
+
+    async getCountryById(req,res){
+        try {
+            const id=+req.params.id;
+            if(!isValidObjectId(id)){
+                return res.status(400).json({
+                statusCode:400,
+                message: 'Invalid ObjectId',
+            })
+            }
+            const countries=await Country.findById(id);
+            if(!countries){
+                return res.status(404).json({
+                    statusCode:404,
+                    message:'Country not found'
+                })
+            }
+            return res.status(200).json({
+                statusCode:201,
+                message: 'success',
+                data:countries
+            })
+
+        } catch (error) {
+            return res.statuts(500).json({
+                statusCode:500,
+                message:error.message || 'Internal error server'
+            })
+        }
+    }
+
+    async UpdateCountry(req,res){
+        try {
+            const id=+req.params.id;
+            if(!isValidObjectId(id)){
+                return res.status(400).json({
+                statusCode:400,
+                message: 'Invalid ObjectId',
+            })
+            }
+            const countries=await Country.update({$set:{...req.body}});
+            if(!countries){
+                return res.status(404).json({
+                    statusCode:404,
+                    message:'Country not found'
+                })
+            }
+            return res.status(200).json({
+                statusCode:201,
+                message: 'success',
+                data:countries
+            })
+
+        } catch (error) {
+            return res.statuts(500).json({
+                statusCode:500,
+                message:error.message || 'Internal error server'
+            })
+        }
+    }
+    
+    async deleteCountry(req,res){
+        try {
+            const id=+req.params.id;
+            if(!isValidObjectId(id)){
+                return res.status(400).json({
+                statusCode:400,
+                message: 'Invalid ObjectId',
+            })
+            }
+            const countries=await Country.findById(id);
+            if(!countries){
+                return res.status(404).json({
+                    statusCode:404,
+                    message:'Country not found'
+                })
+            }
             return res.status(200).json({
                 statusCode:201,
                 message: 'success',

@@ -7,5 +7,8 @@ const controller=new CountryController()
 router
     .post('/',controller.createCountry)
     .get('/',controller.getAllCountry)
+    .get('/:id',controller.getCountryById)
+    .put('/:id',controller.UpdateCountry)
+    .delete('/:id',controller.deleteCountry)
 
 export default router    
