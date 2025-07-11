@@ -8,7 +8,7 @@ router
     .post('/',controller.createCountry)
     .get('/',controller.getAllCountry)
     .get('/:id',controller.getCountryById)
-    .put('/:id',controller.UpdateCountry)
+    .patch('/:id',controller.UpdateCountry)
     .delete('/:id',controller.deleteCountry)
 
 export default router    

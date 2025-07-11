@@ -100,7 +100,6 @@ export class CountryController{
             })
         }
     }
-    
     async deleteCountry(req,res){
         try {
             const id=+req.params.id;
@@ -110,13 +109,7 @@ export class CountryController{
                 message: 'Invalid ObjectId',
             })
             }
-            const countries=await Country.findById(id);
-            if(!countries){
-                return res.status(404).json({
-                    statusCode:404,
-                    message:'Country not found'
-                })
-            }
+            const countries=await Country.findByIdAndDelete(id,req.body,{new:true})
             return res.status(200).json({
                 statusCode:201,
                 message: 'success',
