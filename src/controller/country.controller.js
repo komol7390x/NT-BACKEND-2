@@ -1,7 +1,7 @@
 import Country from '../models/country.model.js';
 import {Types,isValidObjectId} from 'mongoose';
 
-export class CountryController{
+class CountryController{
     
     async createCountry(req,res){
         try { 
@@ -28,7 +28,6 @@ export class CountryController{
 
     async getAllCountry(_,res){
         try {
-            console.log(111);
             const countries=await Country.find();
             return res.status(200).json({
                 statusCode:200,
@@ -127,4 +126,8 @@ export class CountryController{
         }
     }
 
+}
+
+export{
+    CountryController
 }
