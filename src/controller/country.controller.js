@@ -1,11 +1,13 @@
 import Country from '../models/country.model.js';
 import {Types,isValidObjectId} from 'mongoose';
+
 export class CountryController{
+    
     async createCountry(req,res){
         try { 
             const existsCountry=await Country.findOne({name:req.body?.name});
             if(existsCountry){
-                return res.statuts(409).json({
+                return res.status(409).json({
                 statusCode:409,
                 message:'this country already added'
             })
@@ -26,9 +28,10 @@ export class CountryController{
 
     async getAllCountry(_,res){
         try {
+            console.log(111);
             const countries=await Country.find();
             return res.status(200).json({
-                statusCode:201,
+                statusCode:200,
                 message: 'success',
                 data:countries
             })
@@ -43,7 +46,7 @@ export class CountryController{
 
     async getCountryById(req,res){
         try {
-            const id=+req.params.id;
+            const id=req.params.id;
             if(!isValidObjectId(id)){
                 return res.status(400).json({
                 statusCode:400,
@@ -58,7 +61,7 @@ export class CountryController{
                 })
             }
             return res.status(200).json({
-                statusCode:201,
+                statusCode:200,
                 message: 'success',
                 data:countries
             })
@@ -73,7 +76,7 @@ export class CountryController{
 
     async UpdateCountry(req,res){
         try {
-            const id=+req.params.id;
+            const id=req.params.id;
             if(!isValidObjectId(id)){
                 return res.status(400).json({
                 statusCode:400,
@@ -88,7 +91,7 @@ export class CountryController{
                 })
             }
             return res.status(200).json({
-                statusCode:201,
+                statusCode:200,
                 message: 'success',
                 data:countries
             })
@@ -102,7 +105,7 @@ export class CountryController{
     }
     async deleteCountry(req,res){
         try {
-            const id=+req.params.id;
+            const id=req.params.id;
             if(!isValidObjectId(id)){
                 return res.status(400).json({
                 statusCode:400,
@@ -111,7 +114,7 @@ export class CountryController{
             }
             const countries=await Country.findByIdAndDelete(id,req.body,{new:true})
             return res.status(200).json({
-                statusCode:201,
+                statusCode:200,
                 message: 'success',
                 data:countries
             })
