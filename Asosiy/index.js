@@ -5,7 +5,7 @@ const resultBcrypt=async(item)=>{
     return hash
 }
 
-const res=resultBcrypt('salom')
+const res=await resultBcrypt('salom')
 const check=await bcrypt.compare('salom',res);
 console.log(check);
 
