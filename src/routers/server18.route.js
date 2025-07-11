@@ -6,6 +6,6 @@ const controller=new CountryController()
 
 router
     .post('/',controller.createCountry)
-    .get('/',controller.salom)
+    .get('/',controller.getAllCountry)
 
 export default router    
