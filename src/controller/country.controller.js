@@ -80,7 +80,7 @@ export class CountryController{
                 message: 'Invalid ObjectId',
             })
             }
-            const countries=await Country.update({$set:{...req.body}});
+            const countries=await Country.findByIdAndUpdate(id,req.body,{new:true})
             if(!countries){
                 return res.status(404).json({
                     statusCode:404,
