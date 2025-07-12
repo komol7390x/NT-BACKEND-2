@@ -1,14 +1,14 @@
 import {Router} from 'express'
-import {CountryController} from '../controller/country.controller.js'
+import {ProductsController} from '../controller/products.controller.js'
 
 const router=Router()
-const controller=new CountryController()
+const controller=new ProductsController()
 
 router
-    .post('/',controller.createCountry)
-    .get('/',controller.getAllCountry)
-    .get('/:id',controller.getCountryById)
-    .patch('/:id',controller.UpdateCountry)
-    .delete('/:id',controller.deleteCountry)
+    .post('/',controller.createProducts)
+    .get('/',controller.getAllProducts)
+    .get('/:id',controller.getProductsById)
+    .patch('/:id',controller.UpdateProducts)
+    .delete('/:id',controller.deleteProducts)
 
 export {router}
