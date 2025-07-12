@@ -1,18 +1,18 @@
-import Country from '../models/country.model.js';
+import Products from '../models/products.model.js';
 import {isValidObjectId} from 'mongoose';
 
-export class CountryController{
+export class ProductsController{
     
-    async createCountry(req,res){
+    async createProducts(req,res){
         try { 
-            const existsCountry=await Country.findOne({name:req.body?.name});
-            if(existsCountry){
+            const existsProducts=await Products.findOne({name:req.body?.name});
+            if(existsProducts){
                 return res.status(409).json({
                 statusCode:409,
-                message:'this country already added'
+                message:'this Products already added'
             })
             }
-            const result=await Country.create(req.body);
+            const result=await Products.create(req.body);
             return res.status(201).json({
                 statusCode:201,
                 message: 'success',
@@ -26,9 +26,9 @@ export class CountryController{
         }
     }
 
-    async getAllCountry(_,res){
+    async getAllProducts(_,res){
         try {
-            const countries=await Country.find();
+            const countries=await Products.find();
             return res.status(200).json({
                 statusCode:200,
                 message: 'success',
@@ -43,7 +43,7 @@ export class CountryController{
         }
     }
 
-    async getCountryById(req,res){
+    async getProductsById(req,res){
         try {
             const id=req.params.id;
             if(!isValidObjectId(id)){
@@ -52,11 +52,11 @@ export class CountryController{
                 message: 'Invalid ObjectId',
             })
             }
-            const countries=await Country.findById(id);
-            if(!countries){
+            const product=await Products.findById(id);
+            if(!product){
                 return res.status(404).json({
                     statusCode:404,
-                    message:'Country not found'
+                    message:'Products not found'
                 })
             }
             return res.status(200).json({
@@ -73,7 +73,7 @@ export class CountryController{
         }
     }
 
-    async UpdateCountry(req,res){
+    async UpdateProducts(req,res){
         try {
             const id=req.params.id;
             if(!isValidObjectId(id)){
@@ -82,11 +82,11 @@ export class CountryController{
                 message: 'Invalid ObjectId',
             })
             }
-            const countries=await Country.findByIdAndUpdate(id,req.body,{new:true})
-            if(!countries){
+            const product=await Products.findByIdAndUpdate(id,req.body,{new:true})
+            if(!product){
                 return res.status(404).json({
                     statusCode:404,
-                    message:'Country not found'
+                    message:'Products not found'
                 })
             }
             return res.status(200).json({
@@ -102,7 +102,7 @@ export class CountryController{
             })
         }
     }
-    async deleteCountry(req,res){
+    async deleteProducts(req,res){
         try {
             const id=req.params.id;
             if(!isValidObjectId(id)){
@@ -111,7 +111,7 @@ export class CountryController{
                 message: 'Invalid ObjectId',
             })
             }
-            const countries=await Country.findByIdAndDelete(id,req.body,{new:true})
+            const product=await Products.findByIdAndDelete(id,req.body,{new:true})
             return res.status(200).json({
                 statusCode:200,
                 message: 'success',
