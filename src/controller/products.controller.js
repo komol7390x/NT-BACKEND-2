@@ -28,7 +28,7 @@ export class ProductsController{
 
     async getAllProducts(_,res){
         try {
-            const countries=await Products.find();
+            const countries=await Products.find().populate('City').populate('City');;
             return res.status(200).json({
                 statusCode:200,
                 message: 'success',
@@ -52,7 +52,7 @@ export class ProductsController{
                 message: 'Invalid ObjectId',
             })
             }
-            const product=await Products.findById(id);
+            const product=await Products.findById(id).populate('City');;
             if(!product){
                 return res.status(404).json({
                     statusCode:404,

@@ -7,7 +7,13 @@ const productsSchema=new Schema({
         catagory:{type:String},
         quantity:{type:String}
         
-    },{timestamps:true})
+    },{timestamps:true,virtuals:true,toJSON:{virtuals:true},toObject:{virtuals:true}})
+
+productsSchema.virtual('cities',{
+    ref:'City',
+    localField:'_id',
+    foreignField:'products_id'
+})
 
 const Products=model('Products',productsSchema);
 
