@@ -27,7 +27,7 @@ export class GroupsController {
 
     async getAllGroups(_, res) {
         try {
-            const result = await Groups.find().populate('universityID')
+            const result = await Groups.find().populate('universityID').populate('allStudents')
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
@@ -50,7 +50,7 @@ export class GroupsController {
                     message: `this invalid ObjectID`
                 })
             }            
-            const result = await Groups.findById(id).populate('universityID')
+            const result = await Groups.findById(id).populate('universityID').populate('allStudents')
             if (!result) {
                 return res.status(404).json({
                     statusCode: 404,
@@ -109,7 +109,7 @@ export class GroupsController {
                     message: `no found this user ${id}`
                 })
             }
-            const result = await Groups.findById(id).populate('universityID')
+            const result = await Groups.findById(id).populate('universityID').populate('allStudents')
             if (!result) {
                 return res.status(404).json({
                     statusCode: 404,
