@@ -7,7 +7,13 @@ const GroupsSchema=new Schema({
         ref:'university',
         required:true
     }
-},{timestamps:true,versionKey:false})
+},{timestamps:true,versionKey:false,  toJSON: { virtuals: true },toObject: { virtuals: true }})
+
+GroupsSchema.virtual('allStudents', {
+  ref: 'students',
+  localField: '_id',
+  foreignField: 'groupsID'
+});
 
 const Groups=model('groups',GroupsSchema)
 

@@ -27,7 +27,7 @@ export class UniversityController {
 
     async getAllUniversity(_, res) {
         try {
-            const result = await University.find().populate('allUniversity')
+            const result = await University.find().populate({path: 'allGroups',populate: { path: 'allStudents' }})
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
@@ -50,7 +50,7 @@ export class UniversityController {
                     message: `this invalid ObjectID`
                 })
             }            
-            const result = await University.findById(id).populate('allUniversity')
+            const result = await University.findById(id).populate({path: 'allGroups',populate: { path: 'allStudents' }})
             if (!result) {
                 return res.status(404).json({
                     statusCode: 404,
@@ -123,7 +123,7 @@ export class UniversityController {
                     message: `no found this user ${id}`
                 })
             }
-            await University.findByIdAndDelete(id).populate('allUniversity');
+            await University.findByIdAndDelete(id).populate({path:'allGroups',populate:{path:'allStudents'}})
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
