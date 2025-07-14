@@ -86,6 +86,13 @@ export class UniversityController {
                     message: `no found this user ${id}`
                 })
             }
+             const find = await University.findById(id)
+            if (!find) {
+                return res.status(404).json({
+                    statusCode: 404,
+                    message: `no found this user ${id}`
+                })
+            }
             const result = await University.findByIdAndUpdate(id, req.body, { new: true })
             return res.status(201).json({
                 statusCode: 201,
@@ -104,6 +111,13 @@ export class UniversityController {
         try {
             const id = req.params.id
             if (!isValidObjectId(id)) {
+                return res.status(404).json({
+                    statusCode: 404,
+                    message: `no found this user ${id}`
+                })
+            }
+            const result = await University.findById(id)
+            if (!result) {
                 return res.status(404).json({
                     statusCode: 404,
                     message: `no found this user ${id}`

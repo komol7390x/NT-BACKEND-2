@@ -70,7 +70,7 @@ export class GroupsController {
         }
     }
 
-    async updateGroupsyById(req, res) {
+    async updateGroupsById(req, res) {
         try {
             const existGroups = await Groups.findOne({ name: req.body.name })
             if (existGroups) {
@@ -86,7 +86,7 @@ export class GroupsController {
                     message: `no found this user ${id}`
                 })
             }
-            const result = await University.findByIdAndUpdate(id, req.body, { new: true })
+            const result = await Groups.findByIdAndUpdate(id, req.body, { new: true })
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
@@ -109,7 +109,14 @@ export class GroupsController {
                     message: `no found this user ${id}`
                 })
             }
-            await University.findByIdAndDelete(id)
+            const result = await Groups.findById(id).populate('universityID')
+            if (!result) {
+                return res.status(404).json({
+                    statusCode: 404,
+                    message: `no found this user ${id}`
+                })
+            }
+            await Groups.findByIdAndDelete(id)
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',

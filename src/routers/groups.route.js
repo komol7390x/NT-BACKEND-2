@@ -8,7 +8,7 @@ router
     .get('/',groups.getAllGroups)
     .post('/',groups.createGroups)
     .get('/:id',groups.getGroupsById)
-    .patch('/:id',groups.updateGroupsyById)
+    .patch('/:id',groups.updateGroupsById)
     .delete('/:id',groups.deleteGroupsById)
 
 export default router

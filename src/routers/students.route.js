@@ -1,14 +1,14 @@
 import {Router} from 'express'
-import {UniversityController} from '../controller/university.controller.js'
+import {StudentsController} from '../controller/students.controller.js'
 
-const university=new UniversityController()
+const students=new StudentsController()
 const router=Router()
 
 router
-    .get('/',university.getAllUniversity)
-    .post('/',university.createUniversity)
-    .get('/:id',university.getUniversityById)
-    .patch('/:id',university.updateUniversityById)
-    .delete('/:id',university.deleteUniversityById)
+    .get('/',students.getAllStudents)
+    .post('/',students.createStudents)
+    .get('/:id',students.getStudentsById)
+    .patch('/:id',students.updateStudentsById)
+    .delete('/:id',students.deleteStudentsById)
 
 export default router
