@@ -27,7 +27,7 @@ export class StudentsController {
 
     async getAllStudents(_, res) {
         try {
-            const result = await Students.find().populate('groupsID')
+            const result = await Students.find().populate({path: 'groupsID', populate: { path: 'universityID' }});
             return res.status(201).json({
                 statusCode: 201,
                 message: 'success',
@@ -50,7 +50,7 @@ export class StudentsController {
                     message: `this invalid ObjectID`
                 })
             }            
-            const result = await Students.findById(id).populate('groupsID')
+            const result = await Students.findById(id).populate({path: 'groupsID', populate: { path: 'universityID' }});
             if (!result) {
                 return res.status(404).json({
                     statusCode: 404,
