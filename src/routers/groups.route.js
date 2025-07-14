@@ -1,14 +1,14 @@
 import {Router} from 'express'
-import {UniversityController} from '../controller/university.controller.js'
+import {GroupsController} from '../controller/groups.controller.js'
 
-const university=new UniversityController()
-const router=Router()
+const groups=new GroupsController();
+const router=Router();
 
 router
-    .get('/',university.getAllUniversity)
-    .post('/',university.createUniversity)
-    .get('/:id',university.getUniversityById)
-    .patch('/:id',university.updateUniversityById)
-    .delete('/:id',university.deleteUniversityById)
+    .get('/',groups.getAllGroups)
+    .post('/',groups.createGroups)
+    .get('/:id',groups.getGroupsById)
+    .patch('/:id',groups.updateGroupsyById)
+    .delete('/:id',groups.deleteGroupsById)
 
 export default router
